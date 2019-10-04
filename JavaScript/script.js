@@ -19,11 +19,11 @@ $(document).ready(() => {
             //show the images w/ the specific search term and 
             //not show anything else
             if (searchValue.toLowerCase().indexOf(search) > -1) {
-                images[i].style.display = "";
+                images[i].parentNode.style.display = "";
             } else if (searchValue2.toLowerCase().indexOf(search) > -1) {
-                images[i].style.display = "";
+                images[i].parentNode.style.display = "";
             } else {
-                images[i].style.display = "none";
+                images[i].parentNode.style.display = "none";
             }
         };
     });
