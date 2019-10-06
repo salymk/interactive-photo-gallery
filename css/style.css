@@ -14,7 +14,7 @@ h1 {
     grid-template-rows: auto;
     grid-row-gap: 3em;
     padding: 1em;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
