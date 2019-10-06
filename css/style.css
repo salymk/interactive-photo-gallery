@@ -3,23 +3,19 @@ body {
     margin: 0 auto;
     max-width: 100%;
 }
+h1 {
+    text-align: center;
+    color: gold;
+}
 
-.list > li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    margin-bottom: -25px;
-  }
-
-.list {
+.container {
     display: grid;
-    grid-gap: 150px 50px;
-    grid-template-columns: repeat(auto-fill, 200px);
-    grid-template-rows: repeat(4, 100px);
-
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 3em;
+    padding: 1em;
+    justify-items: center;
+    align-items: center;
 }
 
 .flex-input {
@@ -30,40 +26,55 @@ body {
 }
 
 #search {
-    width: 40%;
-    height: 30px;;
+    width: 200px;
+    height: 30px;
 }
 
+    
+@media (min-width: 768px ) {
+    .container {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-row-gap: 3em;
+        padding: 1em;
+        justify-items: center;
+        align-items: center;
 
-/* Trying new stuff down there */
-
-/* body {
-    max-width: 900px;
-    border: 2px solid red;
-    text-align: center;
-    margin: 0 auto;
+    }
+    #search {
+        width: 50%;
+    }
 }
 
- .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 0 4px;
-    padding-top: 25px;
+@media (min-width: 900px ) {
+    .container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 3em;
+        padding: 1em;
+        justify-items: center;
+        align-items: center;
+
+    }
+    #search {
+        width: 50%;
+    }
 }
 
- 
+@media (min-width: 1024px ) {
+    .container {
+        max-width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 3em;
+        padding: 1em;
+        justify-items: center;
+        align-items: center;
 
-.column {
-    flex: 25%;
-    padding-top: 50px;
-} */
-
-/*  
-
-.column a img {
-    margin-top: 8px;
-    vertical-align: middle;
-    padding-top: 50px;
-} */
+    }
+    #search {
+        width: 50%;
+    }
+}
